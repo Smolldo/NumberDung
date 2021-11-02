@@ -1,0 +1,41 @@
+.gamers_block{
+    display: flex;
+}
+body{
+    background-color: cornflowerblue;
+}
+
+.boss{
+    animation-name: bocs;
+    animation-duration: 1.3s;
+    animation-iteration-count: infinite;
+}
+
+.pers{
+    animation-name: cchar;
+    animation-duration: 1.3s;
+    animation-iteration-count: infinite;
+}
+.shad{
+    animation-name: shadxow;
+    animation-duration: 1.3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bos{
+    0%{transform: translateY(5px);}
+    50%{transform: translateY(-5px);}
+    100%{transform: translateY(5px);}
+}
+
+@keyframes shadow {
+    0%{width: 390px;}
+    50%{width: 400px;}
+    100%{width: 390px;} 
+}
+
+@keyframes char{
+    0%{transform: translateX(5px);}
+    50%{transform: translateX(-5px);}
+    100%{transform: translateX(5px);}
+}

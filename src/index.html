@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/icon.png">
+    <link rel="stylesheet" href="./sass/main.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Game of Numbers</title>
+</head>
+<body>
+    <!--Greeting window-->
+    <div class="backdrop">
+        <div class="greet_winow">
+            <ul class="greet_list">
+                <li class="greet_item">
+                    <button class="greet_btn">Start</button>
+                </li>
+                <li class="greet_item">
+                    <button class="greet_btn"><a href="https://www.google.com/" class="exit_link">Exit</a></button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--Rules WindoW-->
+    <div class="rule_cover container is-hidden">
+        <h2 class="rule_title">
+            <ol class="rule_list">
+                <li class="rule_item">Select a name.</li>
+                <li class="rule_item">By pressing the "generate" button, you and the AI ​​will have random numbers.</li>
+                <li class="rule_item">Whoever has the highest number wins the round.</li>
+                <li class="rule_item">The game lasts up to 3 wins.</li>
+                <li class="rule_item">In case of a tie, an additional round is held.</li>
+                <li class="rule_item">Good luck, Samurai</li>
+            </ol>
+            <button class="rule_confirm">OK</button>
+        </h2>
+    </div>
+    <!--Player Name-->
+    <div class="name_block is-hidden">
+        <label for="name_select">name_select</label>
+        <input type="text" name="name_select" id="player_name">
+        <button class="name_confirm">CONFIRM</button>
+    </div>
+    <!--Game WindoW-->
+    <div class="container is-hidden">
+        <h1 class="game_title">Game of Nums</h1>
+        <div class="gamers_block">
+            <!--Player section-->
+            <div class="player">
+                <p class="player_total_pts">@TOTAL_PTS@</p>
+                <picture class="player_photo">
+                    <img src="./images/ai.png" alt="player icon" width="200px" height="200px" class="pers">
+                </picture>
+                <div class="player_stats">
+                    <h3 class="player_name">@NAME@</h3>
+                    <ul class="round_list">
+                        <li class="round_item">
+                            <span class="player_round_box">R</span>
+                        </li>
+                        <li class="round_item">
+                            <span class="player_round_box">R</span>
+                        </li>
+                        <li class="round_item">
+                            <span class="player_round_box">R</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--Game options-->
+            <div class="game_screen">
+                <ul class="generating_num_list">
+                    <li class="generating_num_item">
+                        <span class="num_now">322</span>
+                    </li>
+                    <li class="generating_num_item">
+                        <span class="num_now">322</span>
+                    </li>
+                </ul>
+                <button class="generate_btn">GENERATE</button>
+            </div>
+            <!--AI section-->
+            <div class="player">
+                <p class="AI_total_pts">@TOTAL_PTS@</p>
+                <picture class="player_photo">
+                    <ul class="boss_lst">
+                        <li class="boss_item"><img src="./images/boss.png" alt="player icon" width="400px" height="400px" class="boss"></li>
+                        <li class="boss_item"><img src="./images/boss-shadow.png" width="400px" class="shad"></li>
+                        <li class="boss_item"></li>
+                    </ul>
+                </picture>
+                <div class="player_stats">
+                    <h3 class="player_name">@COMPUTER@</h3>
+                    <ul class="round_list">
+                        <li class="round_item">
+                            <span class="player_round_box">R</span>
+                        </li>
+                        <li class="round_item">
+                            <span class="player_round_box">R</span>
+                        </li>
+                        <li class="round_item">
+                            <span class="player_round_box">R</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <button class="sound_btn">@AUDIO@</button>
+    </div>
+    <!--Boss partial-->
+    <include src = "./partials/boss.html"></include>
+    <script src="./js/index.js"></script>
+</body>
+</html>
