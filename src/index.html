@@ -28,27 +28,21 @@
         <span class="copyright">&copy; Gonyk "SD" Michael</span>
     </div>
     <!--Rules WindoW-->
-    <div class="rule_cover container is-hidden">
-        <h2 class="rule_title">
-            <ol class="rule_list">
-                <li class="rule_item">Select a name.</li>
-                <li class="rule_item">By pressing the "generate" button, you and the AI ​​will have random numbers.</li>
-                <li class="rule_item">Whoever has the highest number wins the round.</li>
-                <li class="rule_item">The game lasts up to 3 wins.</li>
-                <li class="rule_item">In case of a tie, an additional round is held.</li>
-                <li class="rule_item">Good luck, Samurai</li>
-            </ol>
+    <div class="rule_cover is-hidden">
+        <section class="rule_section container">
+            <h2 class="rule_title">Rules</h2>
+            <pre class="rule_list"></pre>
             <button class="rule_confirm">OK</button>
-        </h2>
+        </section>
     </div>
     <!--Player Name-->
-    <div class="name_block is-hidden">
+    <div class="name_block is-none">
         <label for="name_select">name_select</label>
         <input type="text" name="name_select" id="player_name">
         <button class="name_confirm">CONFIRM</button>
     </div>
     <!--Game WindoW-->
-    <div class="container is-hidden">
+    <div class="container is-none">
         <h1 class="game_title">Game of Nums</h1>
         <div class="gamers_block">
             <!--Player section-->
@@ -115,5 +109,6 @@
     <!--Boss partial-->
     <include src = "./partials/boss.html"></include>
     <script src="./js/index.js" type="module"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.js"></script>
 </body>
 </html>

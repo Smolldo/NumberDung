@@ -39,11 +39,6 @@ html {
     margin-bottom: 0;
   }
   
-  img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-  }
 
 .container {
     width: 100%;
@@ -68,4 +63,8 @@ html {
 .is-hidden{
   opacity: 0;
         pointer-events: none;
+}
+
+.is-none{
+  display: none;
 }

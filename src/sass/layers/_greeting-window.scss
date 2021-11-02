@@ -7,15 +7,9 @@
         height: 100vh;
         background-image: linear-gradient(to left, var(--gradient-color)40%,
         var(--gradient-color)100%),
-    url('.././images/backdrop-img.png');
+    url('.././images/backgrounds/backdrop-img.png');
     background-size: contain;
-    
-        transition: cubic-bezier(0.4, 0, 0.2, 1);;
-        transition-duration: .34s;
-        transition-property:  opacity;
-     
-  
-    
+        transition: all .3s linear;  
 }
 
 //greet
