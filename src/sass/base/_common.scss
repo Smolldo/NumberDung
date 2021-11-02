@@ -26,6 +26,7 @@ html {
     margin-top: 0;
     margin-bottom: 0;
     padding-inline-start: 0;
+    list-style: none;
   }
   
   a {
@@ -64,4 +65,7 @@ html {
 }
 
 //is-hidden
-.is-hidden{display: none;}
+.is-hidden{
+  opacity: 0;
+        pointer-events: none;
+}

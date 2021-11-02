@@ -1,9 +1,11 @@
 @import './base/common';
 
 //components
-
+@import './components/buttons';
+@import './components/titles';
 
 //layers
 @import './layers/greeting-window';
 
 //utils
+@import './utils/variables';

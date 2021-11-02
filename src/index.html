@@ -14,16 +14,18 @@
 <body>
     <!--Greeting window-->
     <div class="backdrop">
-        <div class="greet_winow">
+        <h1 class="backdrop_title">Game Of Numbers</h1>
+        <div class="greet_window">
             <ul class="greet_list">
                 <li class="greet_item">
-                    <button class="greet_btn">Start</button>
+                    <button class="greet_btn" data-action="start">Start</button>
                 </li>
                 <li class="greet_item">
-                    <button class="greet_btn"><a href="https://www.google.com/" class="exit_link">Exit</a></button>
+                    <button class="greet_btn" data-action="exit">Exit</button>
                 </li>
             </ul>
         </div>
+        <span class="copyright">&copy; Gonyk "SD" Michael</span>
     </div>
     <!--Rules WindoW-->
     <div class="rule_cover container is-hidden">
@@ -112,6 +114,6 @@
     </div>
     <!--Boss partial-->
     <include src = "./partials/boss.html"></include>
-    <script src="./js/index.js"></script>
+    <script src="./js/index.js" type="module"></script>
 </body>
 </html>
