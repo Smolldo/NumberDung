@@ -16,3 +16,11 @@
     75%{color: yellow;}
     100%{color: purple;}
 }
+
+//rules title
+.rule_title{
+    margin-top: 20px;
+    text-align: center;
+    color: var(--text-color);
+    text-shadow: 0 3px 4px var(--box-shadow);
+}

@@ -1,0 +1,47 @@
+.name_block{
+    z-index: 900;
+    background-image: url('.././images/scroll.png');
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    transition: all .3s linear; 
+
+    @media screen and (min-width:320px) {
+        width: 200px;
+        height: 256px;
+    }
+
+    @media screen and (min-width:768px) {
+        width: 400px;
+        height: 512px;
+}
+
+    &.is-none{
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+.name_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#player_name{
+    text-align: center;
+    margin: 30px auto ;
+    font-size: 20px;
+    width: 230px;
+    border-color: transparent;
+    background-color: transparent;
+    border-bottom-color: brown;
+    outline: yellowgreen;
+   
+}

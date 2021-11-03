@@ -1,6 +1,6 @@
 .rule_cover{
     position: fixed;
-    z-index: 88;
+    z-index: 1;
     top: 0;
     left: 0;
     width: 100%;
@@ -10,8 +10,30 @@
 url('.././images/backgrounds/rule-back.jpg');
 background-size: cover;
     transition: all .3s linear; 
+
 }
 .rule_list{
     font-size: 18px;
     line-height: 22px;
+    word-wrap: normal;
+    text-shadow: 0 3px 4px var(--box-shadow);
+
+    @media screen and (min-width:320px) {
+        display: none;
+ }
+ 
+ @media screen and (min-width:768px) {
+       display: block;
+ }
+}
+
+.rule_section{
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
 }

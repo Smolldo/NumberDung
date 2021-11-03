@@ -1,6 +1,7 @@
 
 let rules = document.querySelector('.rule_list');
 const ruleBtn = document.querySelector('.rule_confirm');
+const names = document.querySelector('.name_block');
 const text = ['1. Select a name.\n',
 "2. By pressing the 'generate' button, you\n",
 "and the AI ​​will have random numbers.\n",
@@ -8,6 +9,10 @@ const text = ['1. Select a name.\n',
 "4. The game lasts up to 3 wins.\n",
 "5. In case of a tie, an additional round is held.\n",
 "6. Good luck, Samurai.\n"];
+
+const nameS = () =>{
+  names.classList.toggle('is-none')
+}
 
 let line = 0;
 let count = 0;
@@ -35,3 +40,8 @@ export const typeLine = () => {
 function getRandomInt(max) {
 return Math.floor(Math.random() * Math.floor(max));
 }
+
+///////////////
+
+
+ruleBtn.addEventListener('click', nameS);
