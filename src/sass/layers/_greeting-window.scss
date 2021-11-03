@@ -5,11 +5,26 @@
         left: 0;
         width: 100%;
         height: 100vh;
+        transition: all .3s linear;  
+
+        @media screen and (min-width:320px) {
+            background-image: linear-gradient(to left, var(--gradient-color)40%,
+            var(--gradient-color)100%),
+        url('.././images/backgrounds/greet-back-mobile.jpg');
+        background-size: cover;
+    }
+    
+    @media screen and (min-width:768px) {
         background-image: linear-gradient(to left, var(--gradient-color)40%,
         var(--gradient-color)100%),
-    url('.././images/backgrounds/backdrop-img.png');
-    background-size: contain;
-        transition: all .3s linear;  
+    url('.././images/backgrounds/backdrop-tablet.png');   
+    }
+    
+    @media screen and (min-width:1200px) {
+        background-image: linear-gradient(to left, var(--gradient-color)40%,
+        var(--gradient-color)100%),
+    url('.././images/backgrounds/backdrop-img.png'); 
+    }
 }
 
 //greet

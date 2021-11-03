@@ -1,3 +1,10 @@
+.sound_btn{
+    position: fixed;
+    z-index: 999;
+    right: 15px;
+    bottom: 15px;
+}
+
 .greet_btn{
     width: 300px;
 
@@ -73,4 +80,8 @@
         cursor: pointer;
         box-shadow: 3px 7px 8px var(--box-shadow);
     }
+}
+
+.mus{
+    z-index: 999;
 }
