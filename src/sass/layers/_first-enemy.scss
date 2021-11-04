@@ -12,10 +12,6 @@
     transition: all .6s linear;
 }
 
-.gamers_block{
-    display: flex;
-}
-
 .is{
 opacity: 0;
 pointer-events: none;
@@ -28,7 +24,7 @@ pointer-events: none;
     left: 0;
     width: 100%;
     height: 100vh;
-    transition: all .3s linear;  
+    transition: all .6s linear;  
     background: linear-gradient(to left, var(--gradient-color)40%,
     var(--gradient-color)100%);
 }
@@ -39,7 +35,7 @@ pointer-events: none;
     transform: translate(-50%,-50%);
     top: 50%;
     left: 50%;
-    transition: all .3s linear;
+    transition: all .6s linear;
 }
 
 .enemy_text{
@@ -72,7 +68,7 @@ pointer-events: none;
     transform: translate(-50%,-50%);
     top: 50%;
     left: 50%;
-    transition: all .3s linear;
+    transition: all .6s linear;
 }
 
 
@@ -98,3 +94,116 @@ pointer-events: none;
         width: 540px;
 }
 }
+
+//player BLOCK SECTOR
+
+.gamers_block{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.player{
+    background-color: yellow;
+    padding: 25px;
+
+    border:5px solid var(--text-color);
+    border-radius: 16px;
+    box-shadow: 0px 5px 8px var(--light-bg);
+}
+
+.char_icon{
+    animation-name: moving;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.player_photo{
+    border:2px solid var(--text-color);
+    background-color: var(--gradient-color);
+    padding: 10px;
+    margin-bottom: 10px;
+
+    
+}
+
+@keyframes moving {
+    0%{transform: scale(1.0);}
+    50%{transform: scale(1.1);}
+    75%{transform: scale(1.0);}
+   
+}
+
+.pts{
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.round_list{
+    display: flex;
+    justify-content: center;
+}
+
+.round_item{
+    margin-top: 10px;
+}
+
+.round_item+.round_item{
+    margin-left: 25px;
+}
+
+.hp{
+    width: 34px;
+    height: 34px;
+
+    animation-name: rotatic;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotatic {
+    0%{transform: rotateY(0deg);}
+    25%{transform: rotateY(90deg);}
+    50%{transform: rotateY(180deg);}
+    75%{transform: rotateY(270deg);}
+    100%{transform: rotateY(360deg);}
+}
+
+//game controllers
+.game_screen{
+    margin-left: 100px;
+    margin-right: 100px;
+
+    width: 400px;
+    align-self: center;
+}
+
+.generating_num_list{
+    display: flex;
+    justify-content: center;
+}
+
+.generating_num_item{
+    height: 90px;
+    width: 90px;
+    background-color: yellow;
+    border-radius: 50%;
+    border: 5px solid var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.generating_num_item+.generating_num_item{
+    margin-left: 80px;
+}
+
+

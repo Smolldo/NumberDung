@@ -2,6 +2,7 @@ import './greeting-window';
 import './rule';
 import './name';
 import './fight';
+import './game-scripts';
 
 
 
