@@ -13,7 +13,6 @@ const refs = {
     refs.backDrop.classList.toggle('is-hidden');
     refs.ruleWindow.classList.remove('is-hidden');
     typeLine();
-    refs.m.play();
   // clikSound.play();
 }
 

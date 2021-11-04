@@ -11,7 +11,8 @@ const text = ['1. Select a name.\n',
 "6. Good luck, Samurai.\n"];
 
 const nameS = () =>{
-  names.classList.toggle('is-none')
+  names.classList.toggle('is-none');
+  ruleBtn.setAttribute("disabled", "true");
 }
 
 let line = 0;

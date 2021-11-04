@@ -1,3 +1,4 @@
+import { typeWriter } from "./fight";
 const refs = {
     inp: document.querySelector('#player_name'),
     nameBtn: document.querySelector('.name_confirm'),
@@ -5,7 +6,9 @@ const refs = {
     heroName: document.querySelector('.player_name'),
     rules: document.querySelector('.rule_cover'),
     names: document.querySelector('.name_block'),
-    forms: document.querySelector('.name_form')
+    forms: document.querySelector('.name_form'),
+    ////first dialog
+    enemyPhraseBlock: document.querySelector('.enemy_phrase')
 }
 
 const screens =[];
@@ -22,10 +25,22 @@ const NameConfirming = () => {
         refs.names.classList.toggle('is-none')
         refs.heroName.textContent = refs.inp.value;
         refs.gameScreen.classList.toggle('is')
+        refs.enemyPhraseBlock.classList.toggle('is')
         screens.forEach(element => {
             element.classList.add('is-end');
         });
+        typeWriter();
+    }
+}
+////////
+const SubmitName = (e) => {
+    if(e.key !== "Enter"){
+        return;
+    }
+    else{
+        NameConfirming();
     }
 }
 
 refs.nameBtn.addEventListener('click', NameConfirming);
+window.addEventListener('keyup', SubmitName);

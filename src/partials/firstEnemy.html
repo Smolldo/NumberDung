@@ -1,12 +1,26 @@
  <!--Game WindoW-->
-    <div class=" game_field game is">
-        <h1 class="game_title">Game of Nums</h1>
+    <div class=" game_field is">
+        <div class="first_dialog container">
+            <div class="enemy_phrase is">
+                <p class="enemy_text"></p>
+                <img src="./images/enemy1-speak.png" alt="enemy speak" class="enemy_icon">
+                <button class="next_btn">NEXT -></button>
+            </div>
+            <div class="hero_phrase is">
+                <img src="./images/me-speak.png" alt="hero speak" class="hero_icon">
+                <p class="hero_text"></p>
+                <button class="start_battle">Fight</button>
+            </div>
+            
+        </div>
+        <div class="container game is">
+            <h1 class="game_title">Game of Nums</h1>
         <div class="gamers_block">
             
             <div class="player">
                 <p class="player_total_pts">@TOTAL_PTS@</p>
                 <picture class="player_photo">
-                    <img src="./images/me-speak.png" alt="player icon" width="200px" height="200px" class="pers">
+                    <img src="./images/me.png" alt="player icon" width="200px" height="200px" class="pers">
                 </picture>
                 <div class="player_stats">
                     <h3 class="player_name">@NAME@</h3>
@@ -60,5 +74,6 @@
                     </ul>
                 </div>
             </div>
+        </div>
         </div>
     </div>

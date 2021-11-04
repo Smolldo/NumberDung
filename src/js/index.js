@@ -1,11 +1,12 @@
 import './greeting-window';
 import './rule';
 import './name';
+import './fight';
 
 
 
 const m = document.querySelector('.mus');
-m.volume = 0.5;
+m.volume = 0.1;
 const b = document.querySelector('.sound_btn');
 
 const PLAYER = () =>{
@@ -13,4 +14,3 @@ const PLAYER = () =>{
 }
 
 b.addEventListener('click', PLAYER);
-

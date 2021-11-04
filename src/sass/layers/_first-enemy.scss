@@ -9,7 +9,7 @@
         var(--gradient-color)100%),
     url('.././images/backgrounds/boss.png');
     background-size: cover; 
-    transition: all .3s linear;
+    transition: all .6s linear;
 }
 
 .gamers_block{
@@ -19,4 +19,82 @@
 .is{
 opacity: 0;
 pointer-events: none;
+}
+//////////////////////////////////////////////////
+.first_dialog{
+    position: fixed;
+    z-index: 88;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transition: all .3s linear;  
+    background: linear-gradient(to left, var(--gradient-color)40%,
+    var(--gradient-color)100%);
+}
+
+.enemy_phrase{
+    display: flex;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    transition: all .3s linear;
+}
+
+.enemy_text{
+    
+    border: 2px solid var(--text-color);
+    border-radius: 50%;
+    border-bottom-right-radius: 0;
+    align-self: center;
+    background-color: var(--light-bg);
+    box-shadow: 3px 7px 8px var(--text-color);
+    @media screen and (max-width:479px) {
+        padding: 30px;
+        width: 94%;
+        height: auto;
+}
+    @media screen and (min-width:480px) {
+        padding: 40px;
+        width: 450px;
+    }
+
+    @media screen and (min-width:768px) {
+        width: 540px;
+}
+}
+
+//// HERO PHRASE
+.hero_phrase{
+    display: flex;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    transition: all .3s linear;
+}
+
+
+.hero_text{
+    
+    border: 2px solid var(--text-color);
+    border-radius: 50%;
+    border-bottom-left-radius: 0;
+    align-self: center;
+    background-color: var(--light-bg);
+    box-shadow: 3px 7px 8px var(--text-color);
+    @media screen and (max-width:479px) {
+        padding: 30px;
+        width: 94%;
+        height: auto;
+}
+    @media screen and (min-width:480px) {
+        padding: 40px;
+        width: 450px;
+    }
+
+    @media screen and (min-width:768px) {
+        width: 540px;
+}
 }
