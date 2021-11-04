@@ -24,7 +24,7 @@
                 <div class="player_stats">
                     <h3 class="player_name">@NAME@</h3>
                     <ul class="round_list_player round_list">
-                        <li class="round_item">
+                      <!--  <li class="round_item">
                             <span class="player_round_box"><img class="hp" src="./images/hp.png" alt="HP"></span>
                         </li>
                         <li class="round_item">
@@ -32,7 +32,7 @@
                         </li>
                         <li class="round_item">
                             <span class="player_round_box"><img class="hp" src="./images/hp.png" alt="HP"></span>
-                        </li>
+                        </li>-->
                     </ul>
                 </div>
             </div>
@@ -57,17 +57,30 @@
                     <h3 class="player_name">Lendo Akbar</h3>
                     <ul class="round_list_computer round_list">
                         <li class="round_item">
-                            <span class="player_round_box"><img class="hp" src="./images/hp.png" alt="HP"></span>
+                            <span class="comp_round_box"><img class="hp" src="./images/hp.png" alt="HP"></span>
                         </li>
                         <li class="round_item">
-                            <span class="player_round_box"><img class="hp" src="./images/hp.png" alt="HP"></span>
+                            <span class="comp_round_box"><img class="hp" src="./images/hp.png" alt="HP"></span>
                         </li>
                         <li class="round_item">
-                            <span class="player_round_box"><img class="hp" src="./images/hp.png" alt="HP"> </span>
+                            <span class="comp_round_box"><img class="hp" src="./images/hp.png" alt="HP"> </span>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
         </div>
+    </div>
+
+    <!--Win modal-->
+    <div class="backdrop_win is">
+        <div class="win_modal">
+            <p class="congrat_text">Congratulation!</p>
+            <button class="boss_fight_btn">Fight with boss</button>
+        </div>
+    </div>
+    <!--Lose modal-->
+    <div class="backdrop_loose is">
+        <p class="loose_text">Retry</p>
+        <button class="retry">Retry</button>
     </div>

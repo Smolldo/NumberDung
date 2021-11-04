@@ -206,4 +206,9 @@ pointer-events: none;
     margin-left: 80px;
 }
 
+.backdrop_win, .backdrop_loose{
+    background-color: rebeccapurple;
+    z-index: 999;
+}
+
 
