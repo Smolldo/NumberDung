@@ -1,10 +1,13 @@
 .game_field{
-    position: fixed;
-    z-index: 88;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
+    position: absolute;
+    background-attachment: fixed;
+        z-index: 88;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+background-size: cover;
+background-position: center;
 
     background-size: cover; 
     transition: all .6s linear;
@@ -140,36 +143,96 @@ pointer-events: none;
 
 .gamers_block{
     margin-top: 40px;
-    display: flex;
-    justify-content: center;
     position: absolute;
-    top: 50%;
+    top: 10%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-10%);
+
+    @media screen and (min-width:320px) {
+    
+}
+    @media screen and (min-width:768px) {
+        display: flex;
+    }
+
+    @media screen and (min-width:1200px) {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+}
 }
 
 .player{
     background-color: yellow;
-    padding: 25px;
 
-    border:5px solid var(--text-color);
-    border-radius: 16px;
     box-shadow: 0px 5px 8px var(--light-bg);
+
+    @media screen and (min-width:320px) {
+        padding: 5px;
+
+        border:1px solid var(--text-color);
+        border-radius: 16px;
+    }
+        @media screen and (min-width:768px) {
+            padding: 15px;
+
+    border:3px solid var(--text-color);
+    border-radius: 16px;
+        }
+    
+        @media screen and (min-width:1200px) {
+            padding: 25px;
+
+            border:5px solid var(--text-color);
+            border-radius: 16px;
+    }
 }
 
 .char_icon{
     animation-name: moving;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    
+
+    @media screen and (min-width:320px) {
+        width: 70px;
+        height: 70px;
+    }
+        @media screen and (min-width:768px) {
+            width: 130px;
+            height: 130px;
+        }
+    
+        @media screen and (min-width:1200px) {
+            width: 200px;
+            height: 200px;
+    }
 }
 
 .player_photo{
     border:2px solid var(--text-color);
     background-color: var(--gradient-color);
-    padding: 10px;
     margin-bottom: 10px;
 
+    @media screen and (min-width:320px) {
+        padding: 4px;
+        border-radius: 16px;
+    }
+        @media screen and (min-width:768px) {
+            padding: 7px; 
+            border-radius: 8px;
+        }
     
+        @media screen and (min-width:1200px) {
+            padding: 0px;
+    }
 }
 
 @keyframes moving {
@@ -179,32 +242,48 @@ pointer-events: none;
    
 }
 
-.pts{
-    text-align: center;
-    margin-bottom: 15px;
-    font-weight: 700;
-}
-
 .round_list{
     display: flex;
     justify-content: center;
 }
 
 .round_item{
-    margin-top: 10px;
+    @media screen and (min-width:320px) {
+        margin-top: 4px; 
+    }
+        @media screen and (min-width:768px) {
+            margin-top: 10px;
+        }
 }
 
+
 .round_item+.round_item{
-    margin-left: 25px;
+    @media screen and (min-width:320px) {
+        margin-left: 5px; 
+    }
+        @media screen and (min-width:768px) {
+            margin-left: 25px; 
+        }
 }
 
 .hp, .hpb{
-    width: 34px;
-    height: 34px;
-
     animation-name: rotatic;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+
+    @media screen and (min-width:320px) {
+        width: 12px;
+    height: 12px;
+    }
+        @media screen and (min-width:768px) {
+            width: 24px;
+    height: 24px; 
+        }
+    
+        @media screen and (min-width:1200px) {
+            width: 34px;
+    height: 34px;
+    }
 }
 
 @keyframes rotatic {
@@ -217,30 +296,95 @@ pointer-events: none;
 
 //game controllers
 .game_screen, .game_screen_Boss{
-    margin-left: 100px;
-    margin-right: 100px;
 
-    width: 400px;
     align-self: center;
+    @media screen and (min-width:320px) {
+      
+    }
+        @media screen and (min-width:768px) {
+           
+        }
+
+        @media screen and (min-width:1200px) {
+            margin-left: 100px;
+            margin-right: 100px;
+        
+            width: 400px;
+        }
+}
+
+.hp, .hpb{
+    animation-name: rotatic;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+    @media screen and (min-width:320px) {
+        width: 12px;
+    height: 12px;
+    }
+        @media screen and (min-width:768px) {
+            width: 24px;
+    height: 24px; 
+        }
+    
+        @media screen and (min-width:1200px) {
+            width: 34px;
+    height: 34px;
+    }
 }
 
 .generating_num_list{
     display: flex;
     justify-content: center;
+
+    @media screen and (min-width:320px) {
+       margin: 20px auto;
+    }
+        @media screen and (min-width:768px) {
+            margin: 40px auto;
+        }
+    
+        @media screen and (min-width:1200px) {
+            
+    }
 }
 
 .generating_num_item{
-    height: 90px;
-    width: 90px;
     background-color: yellow;
     border-radius: 50%;
-    border: 5px solid var(--text-color);
+
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    @media screen and (min-width:320px) {
+        height: 36px;
+        width: 36px; 
 
-    font-size: 24px;
+        border: 2px solid var(--text-color);
+
+        font-size: 14px;
+font-weight: 600;
+    }
+        @media screen and (min-width:768px) {
+            height: 45px;
+            width: 45px; 
+
+            border: 5px solid var(--text-color);
+
+            font-size: 19px;
     font-weight: 700;
+        }
+    
+        @media screen and (min-width:1200px) {
+            height: 90px;
+            width: 90px; 
+
+            border: 5px solid var(--text-color);
+
+            font-size: 24px;
+    font-weight: 700;
+    }
 }
 
 .generating_num_item+.generating_num_item{
