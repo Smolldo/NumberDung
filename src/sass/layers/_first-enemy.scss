@@ -5,11 +5,27 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(to left, var(--gradient-color)40%,
-        var(--gradient-color)100%),
-    url('.././images/backgrounds/boss.png');
+
     background-size: cover; 
     transition: all .6s linear;
+
+    @media screen and (min-width:320px) {
+        background-image: linear-gradient(to left, var(--gradient-color)40%,
+        var(--gradient-color)100%),
+    url('.././images/backgrounds/boss-mobile.png');
+}
+
+@media screen and (min-width:768px) {
+    background-image: linear-gradient(to left, var(--gradient-color)40%,
+    var(--gradient-color)100%),
+url('.././images/backgrounds/boss-tablet.png');  
+}
+
+@media screen and (min-width:1200px) {
+     background-image: linear-gradient(to left, var(--gradient-color)40%,
+        var(--gradient-color)100%),
+    url('.././images/backgrounds/boss.png'); 
+}
 }
 
 .is{
@@ -30,35 +46,50 @@ pointer-events: none;
 }
 
 .enemy_phrase{
-    display: flex;
     position: absolute;
     transform: translate(-50%,-50%);
     top: 50%;
     left: 50%;
     transition: all .6s linear;
+
+    @media screen and (min-width:320px) {
+        display: block;
+}
+    @media screen and (min-width:568px) {
+        display: flex;
+        align-items: flex-start;
+    }
+
 }
 
 .enemy_text{
     
     border: 2px solid var(--text-color);
     border-radius: 50%;
-    border-bottom-right-radius: 0;
     align-self: center;
     background-color: var(--light-bg);
     box-shadow: 3px 7px 8px var(--text-color);
-    @media screen and (max-width:479px) {
+
+
+    @media screen and (min-width:320px) {
         padding: 30px;
-        width: 94%;
-        height: auto;
+        text-align: justify;
 }
-    @media screen and (min-width:480px) {
+    @media screen and (min-width:768px) {
         padding: 40px;
         width: 450px;
+        border-bottom-right-radius: 0;
     }
 
-    @media screen and (min-width:768px) {
+    @media screen and (min-width:1200px) {
         width: 540px;
 }
+}
+
+.enemy_speak{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 //// HERO PHRASE
@@ -69,6 +100,15 @@ pointer-events: none;
     top: 50%;
     left: 50%;
     transition: all .6s linear;
+
+    @media screen and (min-width:320px) {
+        display: flex;
+        flex-direction: column-reverse;
+}
+    @media screen and (min-width:568px) {
+        display: flex;
+        align-items: flex-start;
+    }
 }
 
 
@@ -76,21 +116,22 @@ pointer-events: none;
     
     border: 2px solid var(--text-color);
     border-radius: 50%;
-    border-bottom-left-radius: 0;
     align-self: center;
     background-color: var(--light-bg);
     box-shadow: 3px 7px 8px var(--text-color);
-    @media screen and (max-width:479px) {
+
+
+     @media screen and (min-width:320px) {
         padding: 30px;
-        width: 94%;
-        height: auto;
+        text-align: center;
 }
-    @media screen and (min-width:480px) {
+    @media screen and (min-width:768px) {
         padding: 40px;
         width: 450px;
+        border-bottom-left-radius: 0;
     }
 
-    @media screen and (min-width:768px) {
+    @media screen and (min-width:1200px) {
         width: 540px;
 }
 }

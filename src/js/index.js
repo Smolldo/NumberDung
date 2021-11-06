@@ -6,7 +6,6 @@ import './game-scripts';
 import './boss-fight';
 
 
-
 export const AUDIO = {
     buttons: document.querySelectorAll("button"),
     bossMusic: document.querySelector('.boss_music'),
