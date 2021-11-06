@@ -86,16 +86,15 @@
     text-shadow: 3px 4px 9px var(--text-color);
 
     @media screen and (min-width:320px) {
-        font-size: 18px;
+        font-size: 10px;
 }
     @media screen and (min-width:768px) {
         padding: 40px;
-        width: 450px;
-        font-size: 30px;
+        font-size: 14px;
     }
 
     @media screen and (min-width:1200px) {
-        width: 540px;
-        font-size: 44px;
+        
+        font-size: 24px;
 }
 }
