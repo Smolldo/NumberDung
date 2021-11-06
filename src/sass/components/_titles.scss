@@ -50,3 +50,13 @@
     padding-bottom: 5px;
     background-color: var(--light-bg);
 }
+
+// win / lose title
+
+.congrat_text,.loose_text{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 44px;
+    color: var(--title-color);
+    text-shadow: 0px 4px 9px var(--light-bg);
+}

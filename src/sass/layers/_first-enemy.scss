@@ -207,8 +207,27 @@ pointer-events: none;
 }
 
 .backdrop_win, .backdrop_loose{
-    background-color: rebeccapurple;
+    position: fixed;
+    z-index: 88;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transition: all .3s linear; 
     z-index: 999;
+    background-color: var(--background-color);
+}
+
+.win_modal,.loose_modal{
+    position: absolute;
+		top: 50%;
+		left: 50%;
+        transform: translate(-50%,-50%);
+        min-width: 320px;
+        padding: 40px;
+       background-image:url('.././images/wall.png');
+       border-radius: 26px;
+       box-shadow: 3px 3px 6px var(--text-color);
 }
 
 
