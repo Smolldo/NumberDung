@@ -7,6 +7,7 @@ const refs = {
     rules: document.querySelector('.rule_cover'),
     names: document.querySelector('.name_block'),
     forms: document.querySelector('.name_form'),
+    bossHeroName: document.querySelector('.boss_player_name'),
     ////first dialog
     enemyPhraseBlock: document.querySelector('.enemy_phrase')
 }
@@ -24,6 +25,7 @@ const NameConfirming = () => {
         console.log("Good name!");
         refs.names.classList.toggle('is-none')
         refs.heroName.textContent = refs.inp.value;
+        refs.bossHeroName.textContent = refs.inp.value;
         refs.gameScreen.classList.toggle('is')
         refs.enemyPhraseBlock.classList.toggle('is')
         screens.forEach(element => {

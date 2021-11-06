@@ -1,17 +1,20 @@
+import { textWriter } from "./boss-fight";
 
     const refs = {
+        gameField: document.querySelector('.game_field'),
+        bossGameField: document.querySelector('.boss_fight_cover'),
         generateBtn: document.querySelector('.generate_btn'),
         numberSpanPlayer: document.querySelector('.num_now_pl'),
         numberSpanComputer: document.querySelector('.num_now_ai'),
         healthBarPlayer: document.querySelector('.round_list_player'),
         healthBarComputer: document.querySelector('.round_list_computer'),
-        //liComp: document.querySelector('.player_round_box'),
-        liComp: document.querySelector('.comp_round_box'),
         winWeb: document.querySelector('.backdrop_win'),
         looseWeb: document.querySelector('.backdrop_loose'),
         bossBtn: document.querySelector('.boss_fight_btn'),
         retryBTN: document.querySelector('.retry'),
-        hitSound: document.querySelector('.hit')
+        hitSound: document.querySelector('.hit'),
+        bossDialogBlock: document.querySelector('.boss_dialog'),
+        bossPhrese: document.querySelector('.boss_phrase'),
     }
     /////<a href="https://files.fm/u/kcjykfzcz#/view/hp.jpg"><img src="https://files.fm/thumb_show.php?i=ybwxand52"></a>
     //<a href="https://files.fm/u/kcjykfzcz#/view/hp.jpg"><img src="https://files.fm/thumb_show.php?i=uupdvbcvj"></a>
@@ -50,7 +53,7 @@
         refs.hitSound.play();
         setTimeout(()=>{
             let a = getRandInt(900);
-        let b = getRandInt(900);
+        let b = getRandInt(90);
         refs.numberSpanPlayer.textContent = a;
         refs.numberSpanComputer.textContent = b;
         if(a < b){
@@ -80,6 +83,16 @@
         window.location.reload();
     }
 
+    const BOSSFIGHT = () =>{
+        refs.gameField.classList.add('is');
+        refs.bossGameField.classList.remove('hide');
+        refs.winWeb.classList.add('is-end');
+        refs.bossDialogBlock.classList.remove('is-end');
+        refs.bossPhrese.classList.remove('is-end');
+        textWriter();
+    }
+
     refs.retryBTN.addEventListener('click', RETRY);
     refs.generateBtn.addEventListener('click', generator);
+    refs.bossBtn.addEventListener('click', BOSSFIGHT);
 

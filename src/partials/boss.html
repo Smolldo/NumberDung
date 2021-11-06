@@ -1,44 +1,52 @@
-<div class="boss_fight_cover hide">
+<div class="boss_fight_cover game_field_boss hifde">
     <!--Player section-->
-    <div class="player">
-        <p class="player_total_pts">@TOTAL_PTS@</p>
-        <picture class="player_photo">
-            <img src="./images/me-speak.png" alt="player icon" width="140px" height="140px">
-        </picture>
+    <div class="boss_dialog container is-end">
+        <div class="boss_phrase is-end">
+            <p class="enemy_text boss_text"></p>
+            <img src="./images/boss-speak.png" alt="boss speak" class="boss_icon">
+            <button class="next_btn phrase_after_boss">NEXT -></button>
+        </div>
+        <div class="hero_phrase hero_dialog is-end">
+            <img src="./images/me-speak.png" alt="hero speak" class="hero_icon">
+            <p class="hero_text hero_boss_text"></p>
+            <button class="start_battle push_battle">Fight</button>
+        </div>
+    </div>
+  <div class="container game_boss is-enfd">
+        <!--Player Block-->
+    <div class="player_div_boss">
+        <div class="player_image_dive">
+            <img src="./images/me-boss.png" alt="player icon" class="pers char_icon">
+        </div>
         <div class="player_stats">
             <h3 class="player_name">@NAME@</h3>
-            <ul class="round_list">
-                <li class="round_item">
-                    <span class="player_round_box">R</span>
-                </li>
-                <li class="round_item">
-                    <span class="player_round_box">R</span>
-                </li>
-                <li class="round_item">
-                    <span class="player_round_box">R</span>
-                </li>
+            <ul class="player round_list_playerBoss round_list">
             </ul>
         </div>
+    </div>
+    <!--Action screen-->
+    <div class="game_screen_Boss">
+        <ul class="generating_num_list">
+            <li class="generating_num_item">
+                <span class="num_now_plBoss">-</span>
+            </li>
+            <li class="generating_num_item">
+                <span class="num_now_aiBoss">-</span>
+            </li>
+        </ul>
+        <button class="generate_btnBoss">FIGHT</button>
     </div>
     <!--AI section-->
-    <div class="player">
-        <p class="AI_total_pts">@TOTAL_PTS@</p>
-        <picture class="player_photo">
-            <img src="./images/me.png" alt="player icon" width="140px" height="140px">
-        </picture>
+    <div class="computer_div_b0ss">
+      <ul class="boss_img_list">
+          <li class="boss_img_item"><img src="./images/boss.png" alt="Archy Magnus" class="boss_icon"></li>
+          <li class="boss_img_item"><img src="./images/boss-shadow.png" alt="Shadow" class="boss_icon"></li>
+      </ul>
         <div class="player_stats">
-            <h3 class="player_name">@COMPUTER@</h3>
-            <ul class="round_list">
-                <li class="round_item">
-                    <span class="player_round_box">R</span>
-                </li>
-                <li class="round_item">
-                    <span class="player_round_box">R</span>
-                </li><!--G-->
-                <li class="round_item">
-                    <span class="player_round_box">R</span>
-                </li>
+            <h3 class="player_name">Archy Magnus</h3>
+            <ul class="player round_list round_list_bossBoss">
             </ul>
         </div>
     </div>
+  </div>
 </div>

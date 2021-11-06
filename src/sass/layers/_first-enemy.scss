@@ -225,9 +225,12 @@ pointer-events: none;
         transform: translate(-50%,-50%);
         min-width: 320px;
         padding: 40px;
+
        background-image:url('.././images/wall.png');
        border-radius: 26px;
        box-shadow: 3px 3px 6px var(--text-color);
+
+       transition: all .4s linear;
 }
 
 

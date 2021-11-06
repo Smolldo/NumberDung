@@ -3,6 +3,7 @@ import './rule';
 import './name';
 import './fight';
 import './game-scripts';
+import './boss-fight';
 
 
 
