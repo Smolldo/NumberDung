@@ -143,6 +143,27 @@
     }
 }
 
+.phrase_after_boss{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    align-self: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+
+    transition: cubic-bezier(0.4, 0, 0.2, 1);;
+    transition-duration: .25s;
+    transition-property: box-shadow, color;
+
+    background-image: linear-gradient(180deg, rgba(255,235,0,1) 22%, rgba(130,128,0,1) 100%);
+    &:hover,&:focus {
+        color: var(--hover-btn-color);
+        cursor: pointer;
+        box-shadow: 3px 7px 8px var(--box-shadow);
+    }
+}
+
 ///FIGHT BUTTON
 .start_battle{
     position: fixed;

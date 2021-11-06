@@ -1,6 +1,5 @@
 .rule_cover{
     position: absolute;
-    background-attachment: fixed;
         z-index: 88;
         top: 0;
         left: 0;
@@ -13,7 +12,7 @@ background-position: center;
         background-image: linear-gradient(to left, var(--gradient-color)40%,
     var(--gradient-color)100%),
 url('.././images/backgrounds/rule-mobile.png');
-        min-height: 500px;
+       
  }
  @media screen and (min-width:768px) {
     background-image: linear-gradient(to left, var(--gradient-color)40%,
@@ -58,6 +57,10 @@ url('.././images/backgrounds/rule-back.jpg');
         display: block;
         width: 240px;
  }
+ @media screen and (min-width:568px) {
+    display: block;
+    width: 400px;
+}
  
  @media screen and (min-width:1199px) {
        display: none;

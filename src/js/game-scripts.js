@@ -49,7 +49,7 @@ import '../sass/main.scss';
                 refs.PlayerItem.style.backgroundColor = "red";
                 refs.healthBarPlayer.removeChild(refs.healthBarPlayer.lastElementChild);
                 AUDIO.hurtRoblox.play();
-                AUDIO.hurtRoblox.volume = 0.7;
+                AUDIO.hurtRoblox.volume = 0.5;
                 ColorChanger(refs.ItemP);
                    if(refs.healthBarPlayer.childElementCount < 1){
                        refs.looseWeb.classList.remove('is-end');

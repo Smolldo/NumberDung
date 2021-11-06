@@ -9,11 +9,27 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(to left, var(--gradient-color)40%,
-        var(--gradient-color)100%),
-    url('.././images/backgrounds/first.jpg');
+
     background-size: cover; 
     transition: all .6s linear;
+
+    @media screen and (min-width:320px) {
+        background-image: linear-gradient(to left, var(--gradient-color)40%,
+        var(--gradient-color)100%),
+    url('.././images/backgrounds/first-mobile.png');
+}
+
+@media screen and (min-width:768px) {
+    background-image: linear-gradient(to left, var(--gradient-color)40%,
+        var(--gradient-color)100%),
+    url('.././images/backgrounds/first-tablet.png');  
+}
+
+@media screen and (min-width:1200px) {
+    background-image: linear-gradient(to left, var(--gradient-color)40%,
+    var(--gradient-color)100%),
+url('.././images/backgrounds/first.jpg');
+}
 }
 
 .boss_dialog{
@@ -35,6 +51,35 @@
     top: 50%;
     left: 50%;
     transition: all .6s linear;
+
+    
+    @media screen and (min-width:320px) {
+        display: block;
+    }
+        @media screen and (min-width:568px) {
+            display: flex;
+            justify-content: center;
+        }
+    
+        @media screen and (min-width:1200px) {
+            display: flex;
+            justify-content: center;
+    
+    }
+}
+
+.boss_text{
+
+    @media screen and (min-width:320px) {
+    }
+        @media screen and (min-width:568px) {
+            border-bottom-right-radius: 0px;
+        }
+    
+        @media screen and (min-width:1200px) {
+           
+    
+    }
 }
 
 .game_boss{
@@ -45,10 +90,26 @@
     transform: translate(-50%,-50%);
     align-items: flex-end;
     justify-content: center;
+
+
+    @media screen and (min-width:320px) {
+        display: block;
 }
+    @media screen and (min-width:568px) {
+        display: flex;
+    }
+
+    @media screen and (min-width:1200px) {
+        
+}
+}
+
 .boss_player{
     @media screen and (min-width:320px) {
         width: 100px;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
 }
     @media screen and (min-width:769px) {
         width: 300px;
@@ -69,6 +130,20 @@
     animation-name: meMove;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+
+    @media screen and (min-width:320px) {
+        width: 100px;
+        height: 100px;
+    }
+        @media screen and (min-width:768px) {
+            width: 150px;
+            height: 150px;
+        }
+    
+        @media screen and (min-width:1200px) {
+            width: 200px;
+            height: 200px;
+    }
 }
 
 @keyframes meMove {
@@ -82,8 +157,6 @@
 }
 
 .boss_icon{
-    width: 200px;
-    height: 200px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -91,6 +164,20 @@
     animation-name: boss_move;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+
+    @media screen and (min-width:320px) {
+        width: 100px;
+        height: 100px;
+    }
+        @media screen and (min-width:768px) {
+            width: 150px;
+            height: 150px;
+        }
+    
+        @media screen and (min-width:1200px) {
+            width: 200px;
+            height: 200px;
+    }
 }
 
 
@@ -108,6 +195,20 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+
+    @media screen and (min-width:320px) {
+        width: 100px;
+        height: 20px;
+    }
+        @media screen and (min-width:768px) {
+            width: 150px;
+            height: 150px;
+        }
+    
+        @media screen and (min-width:1200px) {
+            width: 200px;
+            height: 200px;
+    }
 }
 
 @keyframes shadow {
