@@ -1,3 +1,4 @@
+import { AUDIO } from ".";
 import { textWriter } from "./boss-fight";
 
     const refs = {
@@ -50,10 +51,9 @@ import { textWriter } from "./boss-fight";
     ////
     
     const generator = () =>{
-        refs.hitSound.play();
         setTimeout(()=>{
-            let a = getRandInt(900);
-        let b = getRandInt(90);
+            let a = getRandInt(100);
+        let b = getRandInt(75);
         refs.numberSpanPlayer.textContent = a;
         refs.numberSpanComputer.textContent = b;
         if(a < b){
@@ -79,11 +79,14 @@ import { textWriter } from "./boss-fight";
         return Math.floor(Math.floor(x) * Math.random())
     }
 
-    const RETRY = () =>{
+   export const RETRY = () =>{
         window.location.reload();
     }
 
     const BOSSFIGHT = () =>{
+            AUDIO.backTrack.pause();
+            AUDIO.bossMusic.play();
+            AUDIO.bossMusic.volume = 0.5;
         refs.gameField.classList.add('is');
         refs.bossGameField.classList.remove('hide');
         refs.winWeb.classList.add('is-end');

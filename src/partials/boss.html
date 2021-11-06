@@ -1,4 +1,4 @@
-<div class="boss_fight_cover game_field_boss hifde">
+<div class="boss_fight_cover game_field_boss hide">
     <!--Player section-->
     <div class="boss_dialog container is-end">
         <div class="boss_phrase is-end">
@@ -12,14 +12,14 @@
             <button class="start_battle push_battle">Fight</button>
         </div>
     </div>
-  <div class="container game_boss is-enfd">
+  <div class="container game_boss is-end">
         <!--Player Block-->
-    <div class="player_div_boss">
-        <div class="player_image_dive">
-            <img src="./images/me-boss.png" alt="player icon" class="pers char_icon">
+    <div class="player_div_boss boss_player">
+        <div class="player_image_div">
+            <img src="./images/me-boss.png" alt="player icon" class="pers  meBoss">
         </div>
         <div class="player_stats">
-            <h3 class="player_name">@NAME@</h3>
+            <h3 class="boss_player_name player_name">@NAME@</h3>
             <ul class="player round_list_playerBoss round_list">
             </ul>
         </div>
@@ -37,10 +37,10 @@
         <button class="generate_btnBoss">FIGHT</button>
     </div>
     <!--AI section-->
-    <div class="computer_div_b0ss">
+    <div class="computer_div_boss boss_player">
       <ul class="boss_img_list">
           <li class="boss_img_item"><img src="./images/boss.png" alt="Archy Magnus" class="boss_icon"></li>
-          <li class="boss_img_item"><img src="./images/boss-shadow.png" alt="Shadow" class="boss_icon"></li>
+          <li class="boss_img_item"><img src="./images/boss-shadow.png" alt="Shadow" class="boss_icon_shadow"></li>
       </ul>
         <div class="player_stats">
             <h3 class="player_name">Archy Magnus</h3>
@@ -49,4 +49,21 @@
         </div>
     </div>
   </div>
+</div>
+
+
+  <!--Win modal-->
+  <div class="backdrop_win_game is-end">
+    <div class="win_modal end_game">
+        <h3 class="congrat_text">Congratulation! You beat this mf bastard!</h3>
+        <a href="https://www.youtube.com/watch?v=ZkLeR8Vg5E0&list=RDZkLeR8Vg5E0&start_radio=1"><button class="end_game_btn">Exit</button></a>
+        <button class="retry">Play again</button>
+    </div>
+</div>
+<!--Lose modal-->
+<div class="backdrop_loose is-end">
+   <div class="loose_modal">
+    <h3 class="loose_text">You Suck!</h3>
+    <button class="retry retry_end">Retry</button>
+   </div>
 </div>

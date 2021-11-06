@@ -1,6 +1,7 @@
 import list from "../templates/list.hbs";
 import menu from "../templates/img.json";
 import '../sass/main.scss';
+import { RETRY } from "./game-scripts";
 
 const refs = {
     bossField: document.querySelector('.boss_fight_cover'),
@@ -17,6 +18,11 @@ const refs = {
     generateBtn: document.querySelector('.generate_btnBoss'),
     numberSpanPlayer: document.querySelector('.num_now_plBoss'),
     numberSpanComputer: document.querySelector('.num_now_aiBoss'),
+    retryBtn: document.querySelectorAll('.retry'),
+    endGameBtn: document.querySelector('.end_game_btn'),
+    loseBG: document.querySelector('.backdrop_loose'),
+    winBG: document.querySelector('.backdrop_win_game'),
+
 };
 
 
@@ -79,7 +85,7 @@ const heroBossWriter = () => {
         setTimeout(()=>{
             refs.healthBarPlayer.removeChild(refs.healthBarPlayer.lastElementChild);
                if(refs.healthBarPlayer.childElementCount < 1){
-                   alert("U Lose");
+                   refs.loseBG.classList.remove('is-end')
                }
         }, 600)
     }
@@ -87,7 +93,7 @@ const heroBossWriter = () => {
         setTimeout(()=>{
             refs.healthBarComputer.removeChild(refs.healthBarComputer.lastElementChild);
             if(refs.healthBarComputer.childElementCount < 1){
-                alert("U WIN");
+                refs.winBG.classList.remove('is-end')
             }
         }, 600)
     }
@@ -97,5 +103,15 @@ const heroBossWriter = () => {
 const getRandInt = (x) =>{
     return Math.floor(Math.floor(x) * Math.random())
 }
+
+const retry = () =>{
+    RETRY();
+}
+
+refs.retryBtn.forEach(el =>
+    el.addEventListener('click',retry)
+);
+
+
 
 refs.generateBtn.addEventListener('click',Fighter);

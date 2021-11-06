@@ -7,12 +7,19 @@ import './boss-fight';
 
 
 
-const m = document.querySelector('.mus');
-m.volume = 0.1;
-const b = document.querySelector('.sound_btn');
+export const AUDIO = {
+    buttons: document.querySelectorAll("button"),
+    bossMusic: document.querySelector('.boss_music'),
+    hitSound: document.querySelector('.hit'),
+    backTrack: document.querySelector('.back'),
+    clickSound: document.querySelector('.clik'),
+};
 
-const PLAYER = () =>{
-    m.play();
+
+const CLICKING = () => {
+    AUDIO.clickSound.play();
+    AUDIO.clickSound.volume = 0.1;
 }
 
-b.addEventListener('click', PLAYER);
+AUDIO.buttons.forEach(e =>
+    e.addEventListener('click', CLICKING));

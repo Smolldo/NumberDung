@@ -1,3 +1,4 @@
+import { AUDIO } from '.';
 import {typeLine} from './rule';
 
 const refs = {
@@ -10,6 +11,10 @@ const refs = {
 //const clikSound= new Audio('./audio/boss.mp3')
 //functions
  const StartGame = () => {
+    setTimeout(()=>{
+        AUDIO.backTrack.play();
+        AUDIO.backTrack.volume = 0.3;
+    },300)
     refs.backDrop.classList.toggle('is-hidden');
     refs.ruleWindow.classList.remove('is-hidden');
     typeLine();
