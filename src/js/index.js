@@ -13,6 +13,11 @@ export const AUDIO = {
     hitSound: document.querySelector('.hit'),
     backTrack: document.querySelector('.back'),
     clickSound: document.querySelector('.clik'),
+    AudioBtn: document.querySelector('.sound_btn'),
+    hurtMinecraft: document.querySelector('.min_hurt'),
+    hurtRoblox: document.querySelector('.rob_hurt'),
+    amogus: document.querySelector('.amogus'),
+    victory: document.querySelector('.victory'),
 };
 
 
@@ -21,5 +26,12 @@ const CLICKING = () => {
     AUDIO.clickSound.volume = 0.1;
 }
 
+const PlayStop = () =>{
+    AUDIO.backTrack.pause();
+    AUDIO.bossMusic.pause();
+}
+
 AUDIO.buttons.forEach(e =>
     e.addEventListener('click', CLICKING));
+
+AUDIO.AudioBtn.addEventListener('click', PlayStop);

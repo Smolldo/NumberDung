@@ -1,10 +1,17 @@
 import { AUDIO } from ".";
 import { textWriter } from "./boss-fight";
+import list from "../templates/first-list.hbs";
+import menu from "../templates/img.json";
+import '../sass/main.scss';
 
     const refs = {
         gameField: document.querySelector('.game_field'),
         bossGameField: document.querySelector('.boss_fight_cover'),
         generateBtn: document.querySelector('.generate_btn'),
+        PlayerItem: document.querySelector('.PL_item'),
+        ComputerItem: document.querySelector('.AI_item'),
+        ItemP: document.querySelector('.player_photo_p'),
+        ItemC: document.querySelector('.player_photo_c'),
         numberSpanPlayer: document.querySelector('.num_now_pl'),
         numberSpanComputer: document.querySelector('.num_now_ai'),
         healthBarPlayer: document.querySelector('.round_list_player'),
@@ -20,34 +27,14 @@ import { textWriter } from "./boss-fight";
     /////<a href="https://files.fm/u/kcjykfzcz#/view/hp.jpg"><img src="https://files.fm/thumb_show.php?i=ybwxand52"></a>
     //<a href="https://files.fm/u/kcjykfzcz#/view/hp.jpg"><img src="https://files.fm/thumb_show.php?i=uupdvbcvj"></a>
     //<a href="https://files.fm/f/qz6h7drxh"><img src="https://files.fm/thumb_show.php?i=qz6h7drxh"></a>
-    const HP ={
-        src: 'https://files.fm/thumb_show.php?i=ybwxand52',
-        description: "Hit Point",
-    };
-
     
     /*let item = document.createElement('li');
     item.classList.add('player_round_box');
     item.textContent = 34;
     refs.healthBarPlayer.appendChild(item);*/
-    refs.healthBarPlayer.innerHTML = `<li class="round_item">
-    <span class="player_round_box"><img class="hp" src="${HP.src}" alt="${HP.description}"></span>
-</li>
-<li class="round_item">
-    <span class="player_round_box"><img class="hp" src="${HP.src}" alt="${HP.description}"></span>
-</li>
-<li class="round_item">
-    <span class="player_round_box"><img class="hp" src="${HP.src}" alt="${HP.description}"></span>
-</li>`
-    refs.healthBarComputer.innerHTML = `<li class="round_item">
-    <span class="comp_round_box"><img class="hp" src="${HP.src}" alt="${HP.description}"></span>
-</li>
-<li class="round_item">
-    <span class="comp_round_box"><img class="hp" src="${HP.src}" alt="${HP.description}"></span>
-</li>
-<li class="round_item">
-    <span class="comp_round_box"><img class="hp" src="${HP.src}" alt="${HP.description}"> </span>
-</li>`
+    const markUp = menu.map((element) => list(element)).join('');
+    refs.healthBarPlayer.innerHTML = markUp;
+    refs.healthBarComputer.innerHTML = markUp;
     ////
     
     const generator = () =>{
@@ -58,17 +45,31 @@ import { textWriter } from "./boss-fight";
         refs.numberSpanComputer.textContent = b;
         if(a < b){
             setTimeout(()=>{
+                refs.ComputerItem.style.backgroundColor = "green";
+                refs.PlayerItem.style.backgroundColor = "red";
                 refs.healthBarPlayer.removeChild(refs.healthBarPlayer.lastElementChild);
+                AUDIO.hurtRoblox.play();
+                AUDIO.hurtRoblox.volume = 0.7;
+                ColorChanger(refs.ItemP);
                    if(refs.healthBarPlayer.childElementCount < 1){
                        refs.looseWeb.classList.remove('is-end');
+                       AUDIO.amogus.play();
+                       AUDIO.amogus.volume = 0.5;
                    }
             }, 600)
         }
         else{
             setTimeout(()=>{
+                refs.ComputerItem.style.backgroundColor = "red";
+                refs.PlayerItem.style.backgroundColor = "green";
                 refs.healthBarComputer.removeChild(refs.healthBarComputer.lastElementChild);
+                AUDIO.hurtMinecraft.play();
+                AUDIO.hurtMinecraft.volume = 0.7;
+                ColorChanger(refs.ItemC);
                 if(refs.healthBarComputer.childElementCount < 1){
                     refs.winWeb.classList.remove('is-end');
+                    AUDIO.victory.play();
+                    AUDIO.amogus.volume = 0.5;
                 }
             }, 600)
         }
@@ -94,6 +95,20 @@ import { textWriter } from "./boss-fight";
         refs.bossPhrese.classList.remove('is-end');
         textWriter();
     }
+
+  /*  const ColorChanger = () =>{
+        refs.Item.style.backgroundColor = "red";
+        setTimeout(()=>{
+            refs.Item.style.backgroundColor = "rgba(59, 76, 94, 0.438)";  
+        },600)
+    }*/
+
+   export const ColorChanger = (e) =>{
+       e.style.backgroundColor = "red";
+        setTimeout(()=>{
+           e.style.backgroundColor = "transparent";  
+        },600);
+    };
 
     refs.retryBTN.addEventListener('click', RETRY);
     refs.generateBtn.addEventListener('click', generator);

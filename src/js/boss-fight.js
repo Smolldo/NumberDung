@@ -2,6 +2,8 @@ import list from "../templates/list.hbs";
 import menu from "../templates/img.json";
 import '../sass/main.scss';
 import { RETRY } from "./game-scripts";
+import { AUDIO } from ".";
+import { ColorChanger } from "./game-scripts";
 
 const refs = {
     bossField: document.querySelector('.boss_fight_cover'),
@@ -22,7 +24,10 @@ const refs = {
     endGameBtn: document.querySelector('.end_game_btn'),
     loseBG: document.querySelector('.backdrop_loose'),
     winBG: document.querySelector('.backdrop_win_game'),
-
+    PlayerItem: document.querySelector('.PL_item_b'),
+    ComputerItem: document.querySelector('.AI_item_b'),
+    ItemP: document.querySelector('.player_photo_pB'),
+    ItemC: document.querySelector('.player_photo_cB'),
 };
 
 
@@ -83,17 +88,31 @@ const heroBossWriter = () => {
     refs.numberSpanComputer.textContent = b;
     if(a < b){
         setTimeout(()=>{
+            refs.PlayerItem.style.backgroundColor = "red";
+            refs.ComputerItem.style.backgroundColor = "green";
             refs.healthBarPlayer.removeChild(refs.healthBarPlayer.lastElementChild);
-               if(refs.healthBarPlayer.childElementCount < 1){
-                   refs.loseBG.classList.remove('is-end')
+            AUDIO.hurtRoblox.play();
+                AUDIO.hurtRoblox.volume = 0.7;
+                ColorChanger(refs.ItemP);
+            if(refs.healthBarPlayer.childElementCount < 1){
+                   refs.loseBG.classList.remove('is-end');
+                   AUDIO.amogus.play();
+                   AUDIO.amogus.volume = 0.5;
                }
         }, 600)
     }
     else{
         setTimeout(()=>{
+            refs.ComputerItem.style.backgroundColor = "red";
+                refs.PlayerItem.style.backgroundColor = "green";
             refs.healthBarComputer.removeChild(refs.healthBarComputer.lastElementChild);
+            AUDIO.hurtMinecraft.play();
+                AUDIO.hurtMinecraft.volume = 0.7;
+                ColorChanger(refs.ItemC);
             if(refs.healthBarComputer.childElementCount < 1){
-                refs.winBG.classList.remove('is-end')
+                refs.winBG.classList.remove('is-end');
+                AUDIO.victory.play();
+                    AUDIO.amogus.volume = 0.5;
             }
         }, 600)
     }
@@ -112,6 +131,9 @@ refs.retryBtn.forEach(el =>
     el.addEventListener('click',retry)
 );
 
-
+const stopMusic = () =>{
+    AUDIO.bossMusic.pause();
+}
 
 refs.generateBtn.addEventListener('click',Fighter);
+refs.endGameBtn.addEventListener('click', stopMusic);
